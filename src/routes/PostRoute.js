@@ -7,7 +7,8 @@ const app = express()
 
 
 
-router.get("/", PostController.getAllPost);
+// router.get("/", PostController.getAllPost);
+router.get("/", PostController);
 router.post("/create", verifyUser, PostController.createPost);
 router.put("/update/:id", verifyUser, PostController.updatePost);
 router.delete("/delete/:id",verifyUser, PostController.deletePost);
